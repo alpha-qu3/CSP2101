@@ -57,10 +57,15 @@ do
 	#Same grep command. The -c flag means only number of matches is returned.
 	grep_count=$(grep -E -c -i -n $usr_matchType $usr_inverted "$usr_pattern" access_log.txt)
 	
-	#Print results to user
-	printf "\n$grep_count matches found:\n"
-	echo "$grep_command"
-	printf "\n\n"
+	if [ $grep_count -eq 0 ]
+	then
+		printf "\nNo matches Found\n\n"
+	else
+		#Print results to user
+		printf "\n$grep_count matches found:\n"
+		echo "$grep_command"
+		printf "\n\n"
+	fi
 
 	#Ask user if they'd like to quit or do another search.
 	read -p "Another search or quit? [*/q]: " usr_repeat
