@@ -60,7 +60,8 @@ do
 	#Print results to user
 	printf "\n$grep_count matches found:\n"
 	echo "$grep_command"
-	
+	printf "\n\n"
+
 	#Ask user if they'd like to quit or do another search.
 	read -p "Another search or quit? [*/q]: " usr_repeat
 	usr_repeat=$(echo "$usr_repeat" | tr '[:upper:]' '[:lower:]')
