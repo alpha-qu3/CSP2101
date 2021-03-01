@@ -1,4 +1,5 @@
 #!/bin/bash
+#Xander van Rensburg - 10525611 
 
 #Initalise variable to hold total
 total=0

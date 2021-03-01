@@ -1,4 +1,5 @@
 #!/bin/bash
+#Xander van Rensburg - 10525611
 
 while true;
 do
@@ -68,3 +69,6 @@ do
 		break
 	fi
 done
+
+# Once loop is broken it should exit sucessfully
+exit 0
